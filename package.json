@@ -1,0 +1,51 @@
+{
+  "name": "@yuhe520521/auto-mode",
+  "version": "0.1.1",
+  "description": "AGH Harness auto-mode policy advisor — provides tool execution policy and approval guidance for sandboxed auto-execution mode.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.10"
+  },
+  "agnes": {
+    "plugins": [
+      {
+        "export": "autoMode",
+        "apiRange": "^5.0.0",
+        "id": "ext:auto-mode/main",
+        "inject": [
+          "tools"
+        ],
+        "capabilities": {
+          "network": []
+        },
+        "metadata": {
+          "displayName": "Auto Mode Policy",
+          "summary": "Advises on tool execution policy and approval requirements for sandboxed auto-execution mode.",
+          "description": "Provides a policy query tool that returns permission presets, risk classification, and approval guidance for tool execution in auto mode. Originally a host-level hook plugin that intercepted tool execution at runtime; degraded to an explicit query tool in AGH Harness.",
+          "locales": {
+            "zh-CN": {
+              "displayName": "自动模式策略",
+              "summary": "为沙箱自动执行模式提供工具执行策略与审批建议。",
+              "description": "提供策略查询工具，返回权限预设、风险分级和审批指引。原为宿主钩子型插件，在运行时拦截工具执行；AGH Harness 中降级为显式查询工具。"
+            }
+          }
+        }
+      }
+    ],
+    "metadata": {
+      "displayName": "Auto Mode Policy",
+      "summary": "Advises on tool execution policy and approval requirements for sandboxed auto-execution mode.",
+      "description": "Provides a policy query tool that returns permission presets, risk classification, and approval guidance for tool execution in auto mode."
+    },
+    "provides": [
+      "tool"
+    ]
+  },
+  "displayName": "Auto Mode Policy"
+}

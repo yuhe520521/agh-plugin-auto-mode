@@ -1,0 +1,12 @@
+{
+  "plugin_id": "agh-auto-mode",
+  "package": "@yuhe520521/auto-mode",
+  "version": "0.1.1",
+  "display_name": "Auto Mode Policy",
+  "display_name_zh": "自动模式策略",
+  "source_version": null,
+  "repository": "https://github.com/yuhe520521/agh-plugin-auto-mode",
+  "published_by": "AGH Hub pipeline",
+  "published_at": "2026-11-20T17:45:10.170Z",
+  "pipeline": "AGH Hub P4 → gh-publish"
+}
